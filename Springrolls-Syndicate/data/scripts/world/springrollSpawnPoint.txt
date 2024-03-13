@@ -1,0 +1,55 @@
+package data.scripts.world;
+
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.FleetAssignment;
+import com.fs.starfarer.api.campaign.LocationAPI;
+import com.fs.starfarer.api.campaign.SectorAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken; //These are imports, so you can utilize functions from the various API. If you try to use a function from another spawn point file and it crashed on compile with a message that it can't determine the type name, you have probably forgotten to add the required API.
+
+public class springrollSpawnPoint extends BaseSpawnPoint { //When editing the file, make sure you change the part here that says PirateSpawnPoint to whatever your spawn point is called.
+
+    public springrollSpawnPoint(SectorAPI sector, LocationAPI location,  //Change PirateSpawnPoint here too – again to whatever your spawn point is called.
+            float daysInterval, int maxFleets, SectorEntityToken anchor) {
+        super(sector, location, daysInterval, maxFleets, anchor);
+    }
+
+    @Override
+    protected CampaignFleetAPI spawnFleet() {
+
+        String type = null;  //Here it's setting the type randomly. This type corresponds to the ID of your fleets in the faction file – capitalization matters.
+        float r = (float) Math.random(); //If you want one spawn creating a random assortment of fleets, this is a good way to do it. If you just want one fleet type, you could skip all this entirely and replace type in the createFleet thing with your fleet type in quotes.
+        if (r > .8f) {
+            type = "scout";
+        } else if (r > 0.45f) {
+            type = "raiders1";
+        } else if (r > 0.3f) {
+            type = "raiders2";
+        } else if (r > 0.15f) {
+            type = "attackFleet";
+        } else if (r > 0.05f) {
+            type = "carrierGroup";
+        } else {
+            type = "armada";
+        }
+
+        CampaignFleetAPI fleet = getSector().createFleet("pirates", type); //Here we are setting up the fleet. The createFleet part requires a factionid and a type. The “pirates” is the faction, so change that to your faction id, type is the string we set above at random.
+        getLocation().spawnFleet(getAnchor(), 0, 0, fleet); //Here we are spawning the fleet. This is spawnFleet(location, xoffset, yoffset, fleet). getAnchor() is finding the anchor that you will set when you create the spawn point in your gen file (I'll cover that next). The offset allows you to spawn the fleet away from your spawn point, but it isn't necessary.
+
+
+        if (type.equals("scout") || type.equals("raiders1") || type.equals("raiders2") || type.equals("attackFleet")) { //Here it's checking for the type and adding conditional assignments based on that. These assignments will only apply to scout, raiders1, raiders2, and attackFleet.
+            fleet.addAssignment(FleetAssignment.RAID_SYSTEM, null, 10); //The assignments work like this: addAssignment(assignment, location, maxdurationindays) Valid assignments can be found in the FleetAssignment.java file in the Starfarer API. RAID_SYSTEM simply roams the system attacking stuff and doesn't require a specified location.
+            fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN,  getAnchor(), 1000); //Here it's telling the fleet to go to the anchor location and de-spawn after it's done raiding, with a 1000 day duration so it won't give up on it. This prevents fleets that get worn down to a single fighter wing or such from flying around forever – they eventually de-spawn so another fleet can spawn.
+        } else {
+            if ((float) Math.random() > 0.5f) {
+                fleet.addAssignment(FleetAssignment.RAID_SYSTEM, null, 30);
+                fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, getAnchor(), 1000);
+            } else {
+                fleet.addAssignment(FleetAssignment.DEFEND_LOCATION, getAnchor(), 20);
+                fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, getAnchor(), 1000);
+            }
+        }
+
+        return fleet;
+    }
+
+}

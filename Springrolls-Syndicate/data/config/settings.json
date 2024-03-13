@@ -1,0 +1,31 @@
+{
+	"designTypeColors": {
+		"Springrolls-Syndicate": [146, 48, 48, 255],
+		"Springrolls-Technologies": [146, 48, 48, 255],
+	},
+	"graphics": {
+		#"characters": {
+		#	"sbr_clarisse":"graphics/portraits/characters/sbr_clarisse.png",
+		#},
+		"planets": {
+			"gourmettopolis": "graphics/planets/gourmettopolis.jpg"
+		},
+		
+		"illustrations":{
+            "gourmettopolis_background":"graphics/illustrations/gourmettopolisBG.png",
+        },
+		
+		#"clouds":{
+		#	"clouds1":"graphics/planets/sbr_habitated_clouds1.png",
+		#	"clouds2":"graphics/planets/sbr_habitated_clouds2.png"
+		#},
+		"glow":{
+			"gourmettopolis":"graphics/planets/gourmettopolis_glow.png",
+		},
+		#"blueprint_packages": {
+		#	"sbr_full_bp": "graphics/icons/cargo/sbr_batavia_bp.png",
+		#	"sbr_mil_bp": "graphics/icons/cargo/sbr_batavia_bp.png",
+		#	"sbr_civ_bp": "graphics/icons/cargo/sbr_batavia_bp.png"
+		#}
+	}
+}

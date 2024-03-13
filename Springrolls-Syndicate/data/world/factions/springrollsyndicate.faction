@@ -1,0 +1,247 @@
+{
+   id:"springrollssyndicate",
+   "color":[255, 189, 89,255],
+   "displayName":"Springrolls-Syndicate",
+   "entityNamePrefix":"Springroll-Syndicate",
+   "personNamePrefix":"Springrolls",
+   "displayNameWithArticle":"the Springrolls-Syndicate",
+   "displayNameIsOrAre":"are",
+   "logo":"graphics/factions/springrollsyndicateflag.png",
+   "crest":"graphics/factions/bunni.jpg",
+   "shipNamePrefix":"SSD",
+   "names":{
+		"old english":1,
+		"modern":1,
+		"world":1,
+	},
+   "portraits":{
+      "standard_male":[
+         "graphics/portraits/portrait_corporate01.png",
+         "graphics/portraits/portrait_corporate03.png",
+         "graphics/portraits/portrait13.png",
+      ],
+      "standard_female":[
+         "graphics/portraits/portrait_corporate02.png",
+         "graphics/portraits/portrait_mercenary02.png",
+         "graphics/portraits/portrait16.png",
+      ],
+   },
+   "dialogue":{
+      "greetingFriendly":"Are you visiting us for our song sui again?",
+      "greetingNeutral":"We of the Springroll-Syndicate have scanned your vessel. Please maintain your distance.",
+      "greetingHostileAggressive":"Prepare to be steamed.",
+      "greetingHostileTimid":"We are watching you closely, keep your distance.",
+   },
+   # variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		"springsyn_full_bp":1,
+		"base_bp":0.25, 
+		"midline_bp":0.1, 
+		"lowtech_bp": 0.1,
+		"hightech_bp": 0.1,
+		},
+		"hulls":{
+		},
+	},
+	
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":[
+		"base_bp",
+		"midline_bp",
+		"hightech_bp",
+		"springsyn_civ_bp"
+		],
+		"hulls":[
+		],
+	},
+	
+	# "base_bp",
+	"knownShips":{
+		"tags":[
+		"springsyn_full_bp", 
+		"base_bp", 
+		"midline_bp",
+		"lowtech_bp",
+		"springsyn_civ_bp"
+		],
+		
+		"hulls":[
+		],
+	},
+	
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":["springsyn_full_bp"],
+		"hulls":[
+		"springsyn_masaki_carry",
+		"springsyn_masaki_fuelrunner",
+		
+		],
+	},
+	"knownFighters":{
+		"tags":["springsyn_full_bp"],
+		"fighters":[
+		],
+	},
+	"priorityFighters":{
+		"tags":["springsyn_full_bp"],
+		"fighters":[
+		],
+	},
+	# "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "independent", "base_bp",
+	"knownWeapons":{
+		"tags":["springsyn_full_bp", "base_bp", "midline_bp", "lowtech_bp", "independent"],
+		"weapons":[
+			#"railgun",
+			#"dualflak",
+			#"heavymauler",
+			#"hveldriver",
+			#"gauss",
+			#"mjolnir",
+			#"breachpod",
+			#"sabotpod",
+			#"phasecl",
+			#"cyclone",
+			#"hurricane",
+			#"squall",
+			#"locust",
+			#"pdburst",
+			#"amblaster",
+			#"phasebeam",
+			#"heavyblaster",
+			#"heavyburst",
+			#"ionpulser",
+			#"ionbeam",
+			#"plasma",
+			#"guardian",
+		],
+	},
+	"priorityWeapons":{
+		"tags":["springsyn_full_bp"],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp", "independent"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+			"hiressensors",
+			"efficiency_overhaul",
+			"converted_fighterbay",
+			"ballistic_rangefinder",
+			"shield_shunt",
+		],
+	},
+	"factionDoctrine":{
+		"strictComposition": false,
+		"warships":4,
+		"carriers":1,
+		"phaseShips":2,
+
+		"officerQuality":5,
+		"aggression":3,
+
+		"shipQuality":3,
+		"numShips":1,
+		"shipSize":4,
+
+		"combatFreighterProbability":0.5,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":1,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"officer_training",
+			"coordinated_maneuvers",
+			"electronic_warfare",
+			"carrier_group",
+			"flux_regulation",
+		],
+	},
+	"illegalCommodities":[
+		
+	],
+	"music":{
+        "theme":"music_hegemony_market_neutral",
+        "market_neutral":"music_hegemony_market_neutral",
+        "market_hostile":"music_hegemony_market_hostile",
+        "market_friendly":"music_hegemony_market_friendly",
+        "encounter_neutral":"music_hegemony_encounter_neutral",
+        "encounter_hostile":"music_hegemony_encounter_hostile",
+        "encounter_friendly":"music_hegemony_encounter_friendly",
+    },
+	"custom":{
+		"decentralized":false,
+		"allowsTransponderOffTrade":true,
+		"offersCommissions":false,
+		"engagesInHostilities":false,
+		"buysAICores":true,
+		"AICoreValueMult":2,
+		"AICoreRepMult":1,
+		"buysSurveyData":true,
+		"hostilityImpactOnGrowth":true,
+		"caresAboutAtrocities":true,
+		"punitiveExpeditionData":{
+			"vsCompetitors":false,
+			"vsFreePort":false,
+			"canBombard":false,
+			"territorial":true,
+		},
+	},
+	"ranks":{
+		"ranks":{
+			"factionLeader":{"name":"Chairman"},
+		#	"sbr_civilLeader":{"name":"Civil Commissioner"},
+		},
+		#"posts":{
+		#	"sbr_postfactionLeader":{"name":"Stadhouder"},
+		#	"sbr_postcivilLeader":{"name":"Civil Commissioner"},
+		#},
+	},
+	"fleetTypeNames":{
+		"trade":"Merchantile Convoy",
+		"tradeLiner":"Liner Convoy",
+		"tradeSmuggler":"Smuggler",
+		"smallTrader":"Trader",
+
+		"patrolSmall":"Fast Picket",
+		"patrolMedium":"Patrol",
+		"patrolLarge":"Detachment",
+
+		"inspectionFleet":"Inspection Fleet",
+		"taskForce":"Strike Group",
+
+		"foodReliefFleet":"Humanitarian Fleet",
+	},
+},

@@ -1,0 +1,2 @@
+name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
+The Springrolls Civilian Blueprint Package,springsyn_civilian_package,package_bp,Springrolls-Syndicate,0.75,100000,1000,1,EXTREME,,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,springsyn_civ_bp,A collection of civilian ships blueprints produced by the Springrolls-Syndicate,1

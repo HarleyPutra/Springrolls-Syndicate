@@ -1,0 +1,18 @@
+{
+    "id":"bunni_springrollsyndicate", # For the convenience of troubleshooters, include your name and the mod name, not just an acronym.
+	"name":"Springrolls-Syndicate", # Displayed to the player
+	"author":"Bunni",
+    "utility":"false",
+	"version":"0.0.1",
+	"description":"The Springroll-Syndicate mod!",
+    "gameVersion": "0.96a-RC10", 
+  	"jars":["jars/SpringrollSyndicate.jar"],
+  	"modPlugin":"springroll_ModPlugin",
+	  	"dependencies": [
+          {"id": "lw_lazylib", "name": "LazyLib"},
+          {"id": "MagicLib", "name": "MagicLib"},
+          {"id": "nexerelin", "name": "Nexerelin"}
+    ],
+}
+
+

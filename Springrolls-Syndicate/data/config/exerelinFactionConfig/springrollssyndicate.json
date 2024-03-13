@@ -1,0 +1,164 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+	"startingFaction":true,
+	
+	"difficultyString": "WIP",
+    
+    "directoryUseShortName":true,
+	"useConfigRelationshipsInNonRandomSector":true,
+
+	"ngcTooltip":"Help maintain the status of the historical Springrolls-Syndicate in it's rise to become one of the major faction in the sector.",
+    "rebelFleetSuffix":"Recipe Thieves",
+	
+	"asteroidMiningFleetName":"Mining Expedition",
+    "gasMiningFleetName":"Gas Mining Expedition",
+    "invasionFleetName":"Invasion Fleet",
+    "responseFleetName":"Planetary Patriot Fleet ",
+    "invasionSupportFleetName":"Support Strike Group",
+    "defenceFleetName":"Patriot Fleet",
+	"noSyncRelations":false,
+	"noStartingContact":false,
+    
+    "morality":"good",
+	
+	"vengeanceFleetSizeMult":2.90,
+    "vengeanceLevelNames":["Marked", "Public Enemy", "Kill on Sight"],
+    "vengeanceFleetNames":["Tranquility Conservators", "Bastard Sanitators", "Clean Slates"],
+    "vengeanceFleetNamesSingle":["a Tranquility Conservator Fleet", "a Bastard Sanitator Armada", "a Clean Slate Squadron"],
+
+    "specialForcesPointMult":1.55,
+	"specialForcesSizeMult":1.55,
+
+	"startRelationships":{
+		# Vanilla factions that should be manually set (IE not "hidden" ones),
+		"hegemony":-0.50,
+		"tritachyon":0.0,
+		"luddic_church":-0.25,
+		"persean":0.4,
+		"independent":0.2,
+		"pirates":-0.5,
+
+		# These should be set to the same relationship
+		"lions_guard":0.4,
+		"sindrian_diktat":0.4,
+
+		# More vanilla factions that should be manually set
+		"luddic_path":-0.8,
+		"remnant":-0.5,
+
+		# Mod factions
+		"uaf":0.5,
+		"batavia":0.5,
+		"mayasura":0.5,
+		"ironshell":-0.3,
+		"orks":0.0,
+		"hmi":0.0,
+		"knights_of_eva":-0.8,
+		"interstellarimperium":0.0,
+		"legionarry":0.25,
+		"al_ars":0.15,
+		"scalartech":0.10,
+	},
+
+	"diplomacyPositiveChance":{
+			"sindrian_diktat":1,
+			"hegemony":0.5,
+			"persean":1,
+			"tritachyon":1,
+			"luddic_church":0.25,
+			"luddic_path":0.0,
+			"pirates":0.25,
+
+			# Modded Factions
+			"uaf":1,
+			"mayasura":1,
+			"ironshell":0.6,
+			"orks":0.6,
+			"hmi":0.8,
+			"legionarry":1.25,
+},
+
+	"diplomacyNegativeChance":{
+			"sindrian_diktat":0.75,
+			"hegemony":1.25,
+			"persean":1,
+			"tritachyon":1,
+			"luddic_church":1.25,
+			"luddic_path":1,
+			"pirates":1,
+
+			# Modded Factions
+			"uaf":0.75,
+			"mayasura":0.75,
+			"ironshell":0.75,
+			"orks":1,
+			"hmi":0.75,
+			"legionarry":0.75,
+				},
+
+	"allowAgentActions":true,
+	"allowPrisonerActions":true,
+    
+    "maxRelationships":{
+	},
+	
+    "alignments":{	
+        "ideological":0.5,
+        "technocratic":1.0,
+        "diplomatic":1.0,
+		"militarist":0.5,
+    },
+	
+	"diplomacyTraits":["helps_allies", "likes_ai", "pacifist", "neutralist"],
+	
+	# chance of the faction being picked to send a colony expedition. Default 0 (disabled)
+    "colonyExpeditionChance":1,	# We would like to grow our legacy
+    "colonyTargetValuator":"exerelin.campaign.colony.IndustrialColonyTargetValuator",
+    
+	"specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",
+	
+    "groundBattleSettings":{
+        "moraleDamageTakenMult":0.9,
+    },
+    
+    "startShipsSolo":[
+	  ["swp_alastor_xiv_eli"],
+	  ["lasher_Starting"]
+	],
+    "startShipsCombatSmall":[
+      ["swp_caliber_sta", "swp_brawler_hegemony_ass", "swp_lasher_xiv_eli"],
+      ["enforcer_Balanced", "lasher_CS", "wolf_hegemony_CS"]
+    ],
+    "startShipsTradeSmall":[["mule_Starting", "hound_hegemony_Standard", "kite_hegemony_Interceptor"]],
+    "startShipsCombatLarge":[
+      ["swp_punisher_sta", "swp_caliber_cs", "wolf_hegemony_CS"],
+      ["dominator_Assault", "enforcer_Escort", "kite_hegemony_Interceptor"]
+    ],
+    "startShipsTradeLarge":[["colossus_Standard", "mule_Standard", "kite_Starting"]],
+    "startShipsExplorerLarge":[["venture_Balanced", "buffalo_hegemony_Standard", "shepherd_Frontier"]],
+    "startShipsCarrierSmall":[["condor_Attack", "lasher_Standard", "hound_hegemony_Standard"]],
+    "startShipsCarrierLarge":[["mora_Assault", "enforcer_Escort", "lasher_Strike"]],
+    "startShipsGrandFleet":[["onslaught_xiv_Elite"]],
+	
+	"startSpecialItems":[
+        [["low_tech_package", ""]],
+    ],
+    
+    "defenceStations":[
+        {"ids":["orbitalstation", "battlestation", "starfortress"]},
+        {"ids":["orbitalstation_mid", "battlestation_mid", "starfortress_mid"], "weight":0.5},
+    ],
+    
+    "industrySeeds":[
+        {"id":"orbitalworks", "mult":0.1},
+        {"id":"fuelprod", "mult":0.1},
+        {"id":"lightindustry", "mult":0.1},
+    ],
+    
+    "bonusSeeds":[
+        {"id":"population_upsize", "count":1},
+        {"id":"nanoforge_pristine", "count":1},
+        {"id":"synchrotron", "count":1},
+    ],
+}

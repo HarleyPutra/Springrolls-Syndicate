@@ -1,0 +1,14 @@
+{
+  "springrollssyndicate_flavortown_label":{
+    "defaultName":"Springrolls Splendor", # used if name=null in addCustomEntity()
+    "showInCampaign":false,
+    "showIconOnMap":false,
+    "showNameOnMap":true,
+    "nameFont":"graphics/fonts/insignia25LTaa.fnt",
+    "nameFontScale":3f,
+    "nameAngle":30,
+    "nameColor":[0,35,102,255],
+    "nameShadowColor":[0,0,0,255],
+    "scaleNameWithZoom":true
+  }
+}
